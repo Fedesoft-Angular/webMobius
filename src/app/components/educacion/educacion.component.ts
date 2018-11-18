@@ -20,7 +20,7 @@ export class EducacionComponent implements OnInit {
     M.AutoInit();
 
 
-    this.http.get<educativo>('http://localhost:3000/api/educativos').subscribe(
+    this.http.get<educativo>('https://mobiusdb-2018.herokuapp.com/api/educativos').subscribe(
       data => {
         
         this.EducativoArray = data;

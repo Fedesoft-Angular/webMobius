@@ -14,7 +14,7 @@ export class RetosComponent implements OnInit {
   RetoArray: object;
 
   ngOnInit():void {
-    this.http.get<Reto>('http://localhost:3000/api/retos').subscribe(
+    this.http.get<Reto>('https://mobiusdb-2018.herokuapp.com/api/retos').subscribe(
       data => {
         
         this.RetoArray = data;
