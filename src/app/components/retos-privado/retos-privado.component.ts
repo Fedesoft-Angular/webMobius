@@ -55,7 +55,7 @@ export class RetosPrivadoComponent implements OnInit {
   guardar() {
     debugger;
     
-    var result = this.http.post('http://localhost:3000/api/retos', {
+    var result = this.http.post('https://mobiusdb-2018.herokuapp.com/api/retos', {
       Nombre: this.nombrets,
       Descripcion: this.descripcionts,
       FechaInicio: this.stringToDate($('#fechaInicial').val(),"dd/MM/yyyy","/").getTimezoneOffset(),

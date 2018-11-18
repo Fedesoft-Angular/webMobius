@@ -32,7 +32,7 @@ export class ProveedoresPrivadoComponent implements OnInit {
 
   guardar(){
     
-    var result = this.http.post('http://localhost:3000/api/proveedores', {
+    var result = this.http.post('https://mobiusdb-2018.herokuapp.com/api/proveedores', {
       Nombre: this.nombrets,
       Telefono: this.telefonots,
       Correo : this.correots,
