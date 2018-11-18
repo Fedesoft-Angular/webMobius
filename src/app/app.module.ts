@@ -12,7 +12,7 @@ import { environment } from '../environments/environment';
 import { LoginService } from './services/login.service'
 
 import { AgmCoreModule } from '@agm/core';
-import { LoginComponent } from './components/login/login.component';
+
 import { InicioComponent } from './components/inicio/inicio.component';
 import { RetosComponent } from './components/retos/retos.component';
 import { JuegosComponent } from './components/juegos/juegos.component';
@@ -20,14 +20,7 @@ import { ConcursosComponent } from './components/concursos/concursos.component';
 import { MapaComponent } from './components/mapa/mapa.component';
 import { RedencionesComponent } from './components/redenciones/redenciones.component';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { RegistrarComponent } from './components/registrar/registrar.component';
-import { UsuarioComponent } from './components/usuario/usuario.component';
-
-import { AuthService } from './providers/auth.service';
-import { AuthGuard } from './providers/auth.guard';
-import { UserService } from './providers/user.service';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { LoginApiComponent } from './components/login-api/login-api.component';
 import { UsuarioService } from './services/usuario.service';
@@ -44,7 +37,7 @@ const appRoutes: Routes = [
   { path: 'redenciones', component: RedencionesComponent },
   { path: 'educacion', component: EducacionComponent },
   // { path: 'login', component: LoginComponent },
-  { path: 'usuario', component: UsuarioComponent },
+  
   // { path: 'login-api', component: LoginApiComponent },
   { path: 'userRetos', component: RetosPrivadoComponent },
   { path: 'userProveedor', component: ProveedoresPrivadoComponent },
@@ -55,7 +48,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     InicioComponent,
     RetosComponent,
     JuegosComponent,
@@ -63,8 +55,6 @@ const appRoutes: Routes = [
     MapaComponent,
     RedencionesComponent,
     EducacionComponent,
-    RegistrarComponent,
-    UsuarioComponent,
     LoginApiComponent,
     RetosPrivadoComponent,
     ProveedoresPrivadoComponent,
@@ -86,7 +76,7 @@ const appRoutes: Routes = [
     ),
     HttpClientModule
   ],
-  providers: [AuthService, UserService, AuthGuard, LoginService, UsuarioService],
+  providers: [ LoginService, UsuarioService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
