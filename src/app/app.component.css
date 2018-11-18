@@ -1,0 +1,21 @@
+.logo{
+  
+  width:60px;
+  height:60px;
+  box-sizing:border-box;
+  /* padding-left: 80px; */
+  /*width of the image*/
+  /* background: url('../assets/images/Logo.png') left top no-repeat; */
+}
+
+.centrarLogo
+{
+  padding-left: 10px;
+  height: 65px;
+}
+
+.Titulo
+{
+  float: right;
+  margin: 0;
+}

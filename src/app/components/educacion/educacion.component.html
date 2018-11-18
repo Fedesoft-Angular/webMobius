@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="tabordion col s12 m12">
+      <section id="section{{educativo.Id}}" *ngFor="let educativo of EducativoArray" >
+        <input type="radio" name="sections" id="option{{educativo.Id}}" checked>
+        <label for="option{{educativo.Id}}">{{educativo.NombreTema}}</label>
+        <article>
+          <h2>{{educativo.NombreTema}}</h2>
+          <p>{{educativo.Descripcion}}</p>
+          
+        </article>
+      </section>
+    </div>
+  </div>
+</div>

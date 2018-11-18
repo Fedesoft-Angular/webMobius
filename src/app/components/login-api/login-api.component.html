@@ -1,0 +1,32 @@
+<div class="row" *ngIf="!this.login">
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="usuario" type="text" class="validate" [(ngModel)]="usuarioTs" >
+        <label for="usuario">Usuario</label>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="input-field col s12">
+        <input id="clave" type="password" class="validate" [(ngModel)]="claveTs">
+        <label for="clave">Clave</label>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <button class="btn waves-effect waves-light" type="submit" name="action" (click)="logIn()">Iniciar Sesion
+          <i class="material-icons right">send</i>
+        </button>
+      </div>
+    </div>
+  
+</div>
+<div class="row">
+  <div class="row" *ngIf="this.login">
+    <div class="input-field col s12">
+      <button class="btn waves-effect waves-light" type="submit" name="action" (click)="logOut()">Salir
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </div>
+</div>
