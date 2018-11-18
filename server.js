@@ -2,11 +2,11 @@ const express = require('express'),path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/bogota-limpia'));
+app.use(express.static('./dist/BogotaLimpia'));
 
 app.get('/*', (req,res)=>
 {
-    res.sendFile(path.join('/dist/bogota-limpia/index.html'));
+    res.sendFile(path.join('/dist/BogotaLimpia/index.html'));
 });
 
 app.listen(process.env.PORT || 8080, ()=>{
