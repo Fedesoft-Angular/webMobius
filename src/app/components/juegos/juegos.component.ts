@@ -13,7 +13,7 @@ export class JuegosComponent implements OnInit {
   JuegoArray: object;
 
   ngOnInit():void {
-    this.http.get<juego>('https://mobiusdb-2018.herokuapp.com:3000/api/juegos').subscribe(
+    this.http.get<juego>('https://mobiusdb-2018.herokuapp.com/api/juegos').subscribe(
       data => {
         
         this.JuegoArray = data;
